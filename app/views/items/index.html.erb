@@ -1,0 +1,15 @@
+<h1>Items#index</h1>
+<p>Find me in app/views/items/index.html.erb</p>
+
+
+<div>
+  <% @items.each do |item| %>
+
+    <ul>
+      <li>Part Number: <%= link_to item.part_number, item %></li>
+    </ul>
+
+  <% end %>
+</div>
+
+<%= link_to 'New Item', new_item_path %>

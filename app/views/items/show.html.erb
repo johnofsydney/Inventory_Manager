@@ -1,0 +1,14 @@
+<h1>Items#show</h1>
+<p>Find me in app/views/items/show.html.erb</p>
+
+<div>
+  <ul>
+    <li>Part Number: <%= @item.part_number %></li>
+    <li>List Price: <%= @item.list_price %></li>
+  </ul>
+</div>
+
+<div class="controls">
+  <%= link_to 'Edit Item', edit_item_path(@item) %>
+  <%= link_to 'Delete Item', @item, :method => 'delete', :data => { :confirm => 'You sure?' } %>
+</div>

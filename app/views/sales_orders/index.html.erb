@@ -1,0 +1,15 @@
+<h1>SalesOrders#index</h1>
+<p>Find me in app/views/sales_orders/index.html.erb</p>
+
+<div>
+  <% @sales_orders.each do |so| %>
+
+    <ul>
+      <li>Sales Order: <%= link_to so.id, so %></li>
+      <li>Customer PO Number: <%= so.customer_PO_number %></li>
+    </ul>
+
+  <% end %>
+</div>
+
+<%= link_to 'New Sales Order', new_sales_order_path %>

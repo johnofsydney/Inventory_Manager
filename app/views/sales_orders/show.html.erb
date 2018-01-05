@@ -1,0 +1,15 @@
+<h1>SalesOrders#show</h1>
+<p>Find me in app/views/sales_orders/show.html.erb</p>
+
+
+<div>
+  <ul>
+    <li>Sales Order Number: <%= @sales_order.id %></li>
+    <li>Cusgomer PO Number: <%= @sales_order.customer_PO_number %></li>
+  </ul>
+</div>
+
+<div class="controls">
+  <%= link_to 'Edit SO', edit_sales_order_path(@sales_order) %>
+  <%= link_to 'Delete SO', @sales_order, :method => 'delete', :data => { :confirm => 'You sure?' } %>
+</div>
